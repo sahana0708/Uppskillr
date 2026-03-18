@@ -21,6 +21,8 @@ export default function HomePage() {
         setSubjects(response.data);
       } catch (error) {
         console.error('Failed to fetch subjects:', error);
+        // Set empty array if API fails (backend not available)
+        setSubjects([]);
       } finally {
         setLoading(false);
       }
